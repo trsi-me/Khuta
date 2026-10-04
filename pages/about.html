@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن المنصة - خطة</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/Icon.ico">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-logo">
+                <img src="../assets/images/Logo.png" alt="خطة">
+                <h1>خطة</h1>
+            </div>
+            <div class="user-info" id="userInfo">
+                <span id="userName"></span>
+                <button id="logoutBtn" class="btn btn-secondary">تسجيل الخروج</button>
+            </div>
+        </header>
+
+        <div class="main-wrapper">
+            <nav class="sidebar" id="sidebar">
+                <h2>القائمة الرئيسية</h2>
+                <ul>
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="about.html" class="active">عن المنصة</a></li>
+                    <li><a href="help.html">المساعدة</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+                <h2>الأقسام الأكاديمية</h2>
+                <ul id="departmentsList"></ul>
+                <div id="adminSection" style="display: none;">
+                    <h3>إدارة النظام</h3>
+                    <button class="btn btn-primary" id="addDeptBtn">إضافة قسم</button>
+                    <button class="btn btn-primary" id="manageUsersBtn">إدارة المستخدمين</button>
+                </div>
+            </nav>
+
+            <main class="content">
+                <div class="page-content">
+                    <h2 class="page-title">عن منصة خطة</h2>
+                    
+                    <div class="info-section">
+                        <h3>نظرة عامة</h3>
+                        <p>منصة خطة هي نظام ويب متكامل لإدارة ومتابعة الخطط التشغيلية للأقسام الأكاديمية داخل الكلية. تهدف المنصة إلى تنظيم الأهداف والأنشطة وربطها بالأدلة، مع تحديد الصلاحيات لكل مستخدم ومتابعة نسبة الإنجاز بشكل آلي.</p>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>الهدف من المنصة</h3>
+                        <p>توفير نظام شامل ومركزي لإدارة الخطط التشغيلية للأقسام الأكاديمية، مما يساعد على:</p>
+                        <ul class="features-list">
+                            <li>تنظيم الأهداف والأنشطة بشكل هرمي ومنظم</li>
+                            <li>متابعة تقدم تنفيذ الخطط بشكل دقيق</li>
+                            <li>تسهيل رفع وإدارة الأدلة والوثائق</li>
+                            <li>تحديد الصلاحيات بشكل دقيق لكل مستخدم</li>
+                            <li>توفير تقارير مرئية عن حالة الإنجاز</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>المميزات الرئيسية</h3>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <h4>إدارة الأقسام</h4>
+                                <p>كل قسم أكاديمي له خطة تشغيلية مستقلة ومخصصة</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>هيكلة هرمية</h4>
+                                <p>أهداف - أنشطة - أدلة (ملفات) بشكل منظم</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>نظام صلاحيات</h4>
+                                <p>صلاحيات دقيقة لكل دور (أدمن، رئيس لجنة، عضو هيئة تدريس، رئيس قسم)</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>متابعة تلقائية</h4>
+                                <p>حساب تلقائي لنسب الإنجاز مع مؤشرات لونية للحالة</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>رفع الملفات</h4>
+                                <p>رفع وإدارة الأدلة والوثائق الداعمة لكل نشاط</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>واجهة متجاوبة</h4>
+                                <p>تصميم متجاوب يعمل على جميع الأجهزة</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>نظام الصلاحيات</h3>
+                        <div class="roles-grid">
+                            <div class="role-card">
+                                <h4>الأدمن (Admin)</h4>
+                                <ul>
+                                    <li>إدارة المستخدمين والأقسام</li>
+                                    <li>تحديد اختصاص كل عضو</li>
+                                    <li>عرض جميع الخطط بدون تعديل المحتوى</li>
+                                </ul>
+                            </div>
+                            <div class="role-card">
+                                <h4>رئيس اللجنة</h4>
+                                <ul>
+                                    <li>إضافة وحذف الأهداف والأنشطة</li>
+                                    <li>رفع الأدلة وتحديث نسب الإنجاز</li>
+                                    <li>إدارة الخطط داخل القسم</li>
+                                </ul>
+                            </div>
+                            <div class="role-card">
+                                <h4>عضو هيئة التدريس</h4>
+                                <ul>
+                                    <li>رفع الأدلة فقط</li>
+                                    <li>حذف الأدلة الخاصة بهم</li>
+                                    <li>إدخال نسبة الإنجاز</li>
+                                </ul>
+                            </div>
+                            <div class="role-card">
+                                <h4>رئيس القسم</h4>
+                                <ul>
+                                    <li>الاطلاع على الخطة كاملة</li>
+                                    <li>متابعة إنجاز جميع الأعضاء</li>
+                                    <li>عرض فقط بدون تعديل</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-section">
+                        <h3>مؤشرات الحالة</h3>
+                        <div class="status-info">
+                            <div class="status-item">
+                                <span class="status-indicator green"></span>
+                                <span><strong>أخضر:</strong> تم الرفع والإنجاز</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-indicator orange"></span>
+                                <span><strong>برتقالي:</strong> اقترب موعد التسليم (أقل من 7 أيام)</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-indicator red"></span>
+                                <span><strong>أحمر:</strong> تجاوز موعد التسليم</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2026 منصة خطة. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="about.html">عن المنصة</a>
+                    <a href="help.html">المساعدة</a>
+                    <a href="contact.html">اتصل بنا</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="القائمة">
+        <span></span>
+        <span></span>
+    </button>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+        if (window.location.pathname.includes('about.html')) {
+            document.addEventListener('DOMContentLoaded', async () => {
+                await checkAuth();
+                if (currentUser) {
+                    const userName = document.getElementById('userName');
+                    const logoutBtn = document.getElementById('logoutBtn');
+                    if (userName) userName.textContent = currentUser.name;
+                    if (logoutBtn) {
+                        logoutBtn.onclick = () => {
+                            window.location.href = '../php/logout.php';
+                        };
+                    }
+                    await loadDepartments();
+                    initHeaderScroll();
+                    initMobileMenu();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+

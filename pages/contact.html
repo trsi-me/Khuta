@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - خطة</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/Icon.ico">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-logo">
+                <img src="../assets/images/Logo.png" alt="خطة">
+                <h1>خطة</h1>
+            </div>
+            <div class="user-info" id="userInfo">
+                <span id="userName"></span>
+                <button id="logoutBtn" class="btn btn-secondary">تسجيل الخروج</button>
+            </div>
+        </header>
+
+        <div class="main-wrapper">
+            <nav class="sidebar" id="sidebar">
+                <h2>القائمة الرئيسية</h2>
+                <ul>
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="about.html">عن المنصة</a></li>
+                    <li><a href="help.html">المساعدة</a></li>
+                    <li><a href="contact.html" class="active">اتصل بنا</a></li>
+                </ul>
+                <h2>الأقسام الأكاديمية</h2>
+                <ul id="departmentsList"></ul>
+                <div id="adminSection" style="display: none;">
+                    <h3>إدارة النظام</h3>
+                    <button class="btn btn-primary" id="addDeptBtn">إضافة قسم</button>
+                    <button class="btn btn-primary" id="manageUsersBtn">إدارة المستخدمين</button>
+                </div>
+            </nav>
+
+            <main class="content">
+                <div class="page-content">
+                    <h2 class="page-title">اتصل بنا</h2>
+                    
+                    <div class="contact-section">
+                        <h3>معلومات الاتصال</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <h4>البريد الإلكتروني</h4>
+                                <p>support@khuta.com</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>الهاتف</h4>
+                                <p>+966111234567</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>العنوان</h4>
+                                <p>الكلية، المبنى الرئيسي، الطابق الثاني</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>ساعات العمل</h4>
+                                <p>الأحد - الخميس: 8:00 صباحاً - 4:00 مساءً</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-section">
+                        <h3>إرسال رسالة</h3>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="contactName">الاسم</label>
+                                <input type="text" id="contactName" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">البريد الإلكتروني</label>
+                                <input type="email" id="contactEmail" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject">الموضوع</label>
+                                <select id="contactSubject" name="subject" required>
+                                    <option value="">اختر الموضوع</option>
+                                    <option value="support">دعم فني</option>
+                                    <option value="feature">اقتراح ميزة جديدة</option>
+                                    <option value="bug">الإبلاغ عن خطأ</option>
+                                    <option value="other">أخرى</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">الرسالة</label>
+                                <textarea id="contactMessage" name="message" rows="6" required></textarea>
+                            </div>
+                            <div id="contactSuccess" class="success-message" style="display: none;"></div>
+                            <div id="contactError" class="error-message" style="display: none;"></div>
+                            <button type="submit" class="btn btn-primary btn-block">إرسال الرسالة</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-section">
+                        <h3>الدعم الفني</h3>
+                        <p>للمساعدة الفنية أو الإبلاغ عن مشاكل تقنية، يرجى التواصل معنا عبر:</p>
+                        <ul class="support-list">
+                            <li>البريد الإلكتروني: <strong>tech@khuta.com</strong></li>
+                            <li>الهاتف: <strong>+966111234568</strong></li>
+                            <li>ساعات الدعم: <strong>24/7</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2026 منصة خطة. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="about.html">عن المنصة</a>
+                    <a href="help.html">المساعدة</a>
+                    <a href="contact.html">اتصل بنا</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="القائمة">
+        <span></span>
+        <span></span>
+    </button>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+        if (window.location.pathname.includes('contact.html')) {
+            document.addEventListener('DOMContentLoaded', async () => {
+                await checkAuth();
+                if (currentUser) {
+                    const userName = document.getElementById('userName');
+                    const logoutBtn = document.getElementById('logoutBtn');
+                    const contactName = document.getElementById('contactName');
+                    const contactEmail = document.getElementById('contactEmail');
+                    if (userName) userName.textContent = currentUser.name;
+                    if (contactName) contactName.value = currentUser.name;
+                    if (contactEmail) contactEmail.value = currentUser.email;
+                    if (logoutBtn) {
+                        logoutBtn.onclick = () => {
+                            window.location.href = '../php/logout.php';
+                        };
+                    }
+                    await loadDepartments();
+                    initHeaderScroll();
+                    initMobileMenu();
+                }
+
+                document.getElementById('contactForm').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const successDiv = document.getElementById('contactSuccess');
+                    const errorDiv = document.getElementById('contactError');
+                    
+                    successDiv.style.display = 'block';
+                    successDiv.textContent = 'شكراً لك! تم إرسال رسالتك بنجاح. سنتواصل معك قريباً.';
+                    errorDiv.style.display = 'none';
+                    
+                    setTimeout(() => {
+                        document.getElementById('contactForm').reset();
+                        successDiv.style.display = 'none';
+                    }, 5000);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+

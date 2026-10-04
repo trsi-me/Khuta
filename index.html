@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة - إدارة الخطط التشغيلية</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/Icon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-logo">
+                <img src="assets/images/Logo.png" alt="خطة">
+                <h1>خطة</h1>
+            </div>
+            <div class="user-info" id="userInfo">
+                <span id="userName"></span>
+                <button id="logoutBtn" class="btn btn-secondary">تسجيل الخروج</button>
+            </div>
+        </header>
+
+        <div class="main-wrapper">
+            <nav class="sidebar" id="sidebar">
+                <h2>القائمة الرئيسية</h2>
+                <ul>
+                    <li><a href="index.html" class="active">الرئيسية</a></li>
+                    <li><a href="pages/about.html">عن المنصة</a></li>
+                    <li><a href="pages/help.html">المساعدة</a></li>
+                    <li><a href="pages/contact.html">اتصل بنا</a></li>
+                </ul>
+                <h2>الأقسام الأكاديمية</h2>
+                <ul id="departmentsList"></ul>
+                <div id="adminSection" style="display: none;">
+                    <h3>إدارة النظام</h3>
+                    <button class="btn btn-primary" id="addDeptBtn">إضافة قسم</button>
+                    <button class="btn btn-primary" id="manageUsersBtn">إدارة المستخدمين</button>
+                </div>
+            </nav>
+
+            <main class="content">
+            <div id="welcomeScreen" class="welcome-screen">
+                <h2>مرحباً بك في منصة خطة</h2>
+                <p>اختر قسماً من القائمة الجانبية لعرض خطته التشغيلية</p>
+            </div>
+
+            <div id="departmentView" style="display: none;">
+                <div class="department-header">
+                    <h2 id="deptName"></h2>
+                    <button class="btn btn-primary" id="addPlanBtn" style="display: none;">إضافة خطة جديدة</button>
+                </div>
+                <div id="plansContainer" class="plans-container"></div>
+            </div>
+
+            <div id="planDetailsView" style="display: none;">
+                <button class="btn btn-secondary" id="backToDeptBtn">العودة للقسم</button>
+                <h2 id="planTitle"></h2>
+                <div id="planProgress" class="progress-bar-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="planProgressFill"></div>
+                    </div>
+                    <span id="planProgressText">0%</span>
+                </div>
+                <div id="goalsContainer"></div>
+            </div>
+        </main>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2026 منصة خطة. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="pages/about.html">عن المنصة</a>
+                    <a href="pages/help.html">المساعدة</a>
+                    <a href="pages/contact.html">اتصل بنا</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="القائمة">
+        <span></span>
+        <span></span>
+    </button>
+
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المساعدة - خطة</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/Icon.ico">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-logo">
+                <img src="../assets/images/Logo.png" alt="خطة">
+                <h1>خطة</h1>
+            </div>
+            <div class="user-info" id="userInfo">
+                <span id="userName"></span>
+                <button id="logoutBtn" class="btn btn-secondary">تسجيل الخروج</button>
+            </div>
+        </header>
+
+        <div class="main-wrapper">
+            <nav class="sidebar" id="sidebar">
+                <h2>القائمة الرئيسية</h2>
+                <ul>
+                    <li><a href="../index.html">الرئيسية</a></li>
+                    <li><a href="about.html">عن المنصة</a></li>
+                    <li><a href="help.html" class="active">المساعدة</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+                <h2>الأقسام الأكاديمية</h2>
+                <ul id="departmentsList"></ul>
+                <div id="adminSection" style="display: none;">
+                    <h3>إدارة النظام</h3>
+                    <button class="btn btn-primary" id="addDeptBtn">إضافة قسم</button>
+                    <button class="btn btn-primary" id="manageUsersBtn">إدارة المستخدمين</button>
+                </div>
+            </nav>
+
+            <main class="content">
+                <div class="page-content">
+                    <h2 class="page-title">دليل الاستخدام</h2>
+                    
+                    <div class="help-section">
+                        <h3>كيفية إضافة خطة جديدة</h3>
+                        <ol class="help-steps">
+                            <li>سجل الدخول كأدمن أو رئيس لجنة</li>
+                            <li>اختر القسم من القائمة الجانبية</li>
+                            <li>اضغط على زر "إضافة خطة جديدة"</li>
+                            <li>أدخل عنوان الخطة واضغط "إضافة"</li>
+                        </ol>
+                    </div>
+
+                    <div class="help-section">
+                        <h3>كيفية إضافة هدف</h3>
+                        <ol class="help-steps">
+                            <li>افتح الخطة المطلوبة</li>
+                            <li>اضغط على زر "إضافة هدف"</li>
+                            <li>أدخل عنوان الهدف في النافذة المنبثقة</li>
+                            <li>اضغط "إضافة"</li>
+                        </ol>
+                    </div>
+
+                    <div class="help-section">
+                        <h3>كيفية إضافة نشاط</h3>
+                        <ol class="help-steps">
+                            <li>داخل الهدف المطلوب، اضغط على "إضافة نشاط"</li>
+                            <li>أدخل عنوان النشاط</li>
+                            <li>حدد الموعد النهائي للتسليم</li>
+                            <li>اضغط "إضافة"</li>
+                        </ol>
+                    </div>
+
+                    <div class="help-section">
+                        <h3>كيفية رفع دليل</h3>
+                        <ol class="help-steps">
+                            <li>داخل النشاط المطلوب، اضغط على "رفع دليل"</li>
+                            <li>اختر الملف من جهازك (PDF، صور، مستندات نصية)</li>
+                            <li>اضغط "رفع"</li>
+                            <li>سيتم حفظ الملف وعرضه في قائمة الأدلة</li>
+                        </ol>
+                        <p class="note"><strong>ملاحظة:</strong> الحد الأقصى لحجم الملف هو 10 ميجابايت</p>
+                    </div>
+
+                    <div class="help-section">
+                        <h3>كيفية تحديث نسبة الإنجاز</h3>
+                        <ol class="help-steps">
+                            <li>داخل النشاط، ابحث عن حقل "نسبة الإنجاز"</li>
+                            <li>أدخل النسبة (من 0 إلى 100)</li>
+                            <li>سيتم الحفظ تلقائياً</li>
+                            <li>سيتم تحديث نسبة إنجاز الهدف والخطة تلقائياً</li>
+                        </ol>
+                    </div>
+
+                    <div class="help-section">
+                        <h3>فهم مؤشرات الحالة</h3>
+                        <div class="status-examples">
+                            <div class="status-example">
+                                <span class="status-indicator green"></span>
+                                <div>
+                                    <strong>أخضر:</strong> النشاط مكتمل (نسبة الإنجاز 100%)
+                                </div>
+                            </div>
+                            <div class="status-example">
+                                <span class="status-indicator orange"></span>
+                                <div>
+                                    <strong>برتقالي:</strong> النشاط قريب من الموعد النهائي (أقل من 7 أيام متبقية)
+                                </div>
+                            </div>
+                            <div class="status-example">
+                                <span class="status-indicator red"></span>
+                                <div>
+                                    <strong>أحمر:</strong> النشاط متأخر عن الموعد النهائي
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="help-section">
+                        <h3>الأسئلة الشائعة</h3>
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <h4>كيف يمكنني حذف نشاط أو هدف؟</h4>
+                                <p>فقط رئيس اللجنة أو الأدمن يمكنهم حذف الأنشطة والأهداف. اضغط على زر "حذف" بجانب العنصر المطلوب.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4>هل يمكنني تعديل الموعد النهائي بعد إضافة النشاط؟</h4>
+                                <p>حالياً، يجب حذف النشاط وإضافته مرة أخرى بالموعد الجديد. سيتم إضافة هذه الميزة في التحديثات القادمة.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4>ما هي أنواع الملفات المدعومة؟</h4>
+                                <p>يمكنك رفع ملفات PDF، صور (JPG، PNG)، ومستندات نصية (DOC، DOCX، TXT).</p>
+                            </div>
+                            <div class="faq-item">
+                                <h4>كيف يتم حساب نسبة الإنجاز التلقائية؟</h4>
+                                <p>نسبة إنجاز الهدف = متوسط نسب إنجاز جميع الأنشطة التابعة له. نسبة إنجاز الخطة = متوسط نسب إنجاز جميع الأهداف.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2026 منصة خطة. جميع الحقوق محفوظة.</p>
+                <div class="footer-links">
+                    <a href="about.html">عن المنصة</a>
+                    <a href="help.html">المساعدة</a>
+                    <a href="contact.html">اتصل بنا</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="القائمة">
+        <span></span>
+        <span></span>
+    </button>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+        if (window.location.pathname.includes('help.html')) {
+            document.addEventListener('DOMContentLoaded', async () => {
+                await checkAuth();
+                if (currentUser) {
+                    const userName = document.getElementById('userName');
+                    const logoutBtn = document.getElementById('logoutBtn');
+                    if (userName) userName.textContent = currentUser.name;
+                    if (logoutBtn) {
+                        logoutBtn.onclick = () => {
+                            window.location.href = '../php/logout.php';
+                        };
+                    }
+                    await loadDepartments();
+                    initHeaderScroll();
+                    initMobileMenu();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
