@@ -69,20 +69,20 @@ INSERT INTO departments (name) VALUES
 ('الكلية');
 
 INSERT INTO users (name, email, password, role, department_id) VALUES 
-('مدير النظام', 'admin@khuta.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin', NULL),
-('رئيس لجنة علوم الحاسب', 'head.cs@khuta.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'committee_head', 1),
-('د. أحمد محمد', 'ahmed.cs@khuta.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'faculty_member', 1),
-('د. سارة علي', 'sara.cs@khuta.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'faculty_member', 1),
-('رئيس قسم علوم الحاسب', 'dept.cs@khuta.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'department_head', 1),
-('رئيس لجنة الفيزياء', 'head.physics@khuta.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'committee_head', 2),
-('د. خالد الفيزياء', 'khalid.physics@khuta.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'faculty_member', 2),
-('رئيس قسم الفيزياء', 'dept.physics@khuta.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'department_head', 2),
-('رئيس لجنة الكيمياء', 'head.chemistry@khuta.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'committee_head', 3),
-('د. فاطمة الكيمياء', 'fatima.chemistry@khuta.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'faculty_member', 3),
-('رئيس قسم الكيمياء', 'dept.chemistry@khuta.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'department_head', 3),
-('رئيس لجنة الأحياء', 'head.biology@khuta.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'committee_head', 4),
-('د. عمر الأحياء', 'omar.biology@khuta.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'faculty_member', 4),
-('رئيس قسم الأحياء', 'dept.biology@khuta.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'department_head', 4);
+('مدير النظام', 'admin@khuta.com', '', 'admin', NULL),
+('رئيس لجنة علوم الحاسب', 'head.cs@khuta.com', '', 'committee_head', 1),
+('د. أحمد محمد', 'ahmed.cs@khuta.com', '', 'faculty_member', 1),
+('د. سارة علي', 'sara.cs@khuta.com', '', 'faculty_member', 1),
+('رئيس قسم علوم الحاسب', 'dept.cs@khuta.com', '', 'department_head', 1),
+('رئيس لجنة الفيزياء', 'head.physics@khuta.com', '', 'committee_head', 2),
+('د. خالد الفيزياء', 'khalid.physics@khuta.com', '', 'faculty_member', 2),
+('رئيس قسم الفيزياء', 'dept.physics@khuta.com', '', 'department_head', 2),
+('رئيس لجنة الكيمياء', 'head.chemistry@khuta.com', '', 'committee_head', 3),
+('د. فاطمة الكيمياء', 'fatima.chemistry@khuta.com', '', 'faculty_member', 3),
+('رئيس قسم الكيمياء', 'dept.chemistry@khuta.com', '', 'department_head', 3),
+('رئيس لجنة الأحياء', 'head.biology@khuta.com', '', 'committee_head', 4),
+('د. عمر الأحياء', 'omar.biology@khuta.com', '', 'faculty_member', 4),
+('رئيس قسم الأحياء', 'dept.biology@khuta.com', '', 'department_head', 4);
 
 INSERT INTO plans (department_id, title) VALUES 
 (1, 'الخطة التشغيلية للفصل الدراسي الأول 2024'),
